@@ -21,7 +21,7 @@ public class Web3AuthScript : MonoBehaviour
     private string userInfo;
     private Account account;
     Web3 web3;
-    const string rpcURL = "https://rpc.ankr.com/eth";
+    const string rpcURL = "https://rpc.ankr.com/eth_goerli	";
 
     // Start is called before the first frame update
     void Start()
