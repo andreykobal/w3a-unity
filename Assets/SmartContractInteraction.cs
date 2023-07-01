@@ -4,7 +4,6 @@ using UnityEngine;
 using Nethereum.Web3;
 using Nethereum.Web3.Accounts;
 using Nethereum.Contracts;
-using Nethereum.Hex.HexConvertors.Extensions;
 using Nethereum.Hex.HexTypes;
 using Newtonsoft.Json;
 
@@ -12,7 +11,6 @@ using Newtonsoft.Json;
 public class SmartContractInteraction : MonoBehaviour
 {
     private string url = "https://rpc.ankr.com/eth_goerli";
-    //private string privateKey = "193913ddf890c9c955faef076c316da4c216a6b923b1c61bdae26e8252828938";
     private string contractAddress = "0x693984165233F42fC5CB2aE405ea4D465F8bCc36";
     private string contractABI = "[{\"inputs\":[{\"internalType\":\"uint8\",\"name\":\"_myArg\",\"type\":\"uint8\"}],\"name\":\"addTotal\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"myTotal\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"stateMutability\":\"view\",\"type\":\"function\"}]";
 
@@ -22,7 +20,6 @@ public class SmartContractInteraction : MonoBehaviour
     
     private Web3 web3;
     private Contract contract;
-    //private Account account;
 
     private Function addTotalFunction;
     private Function myTotalFunction;
