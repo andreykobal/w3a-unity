@@ -84,6 +84,8 @@ public class SmartContractInteraction : MonoBehaviour
         try
         {
             var transactionReceipt = await addTotalFunction.SendTransactionAndWaitForReceiptAsync(account.Address, new HexBigInteger(300000), new HexBigInteger(0), null, value);
+            string transactionHash = transactionReceipt.TransactionHash;
+            Debug.Log("Transaction Hash: " + transactionHash);
             Debug.Log("Transaction complete!");
         }
         catch (Exception ex)
