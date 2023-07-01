@@ -29,7 +29,7 @@ public class Web3AuthScript : MonoBehaviour
         web3Auth = GetComponent<Web3Auth>();
         web3Auth.setOptions(new Web3AuthOptions()
         {
-            clientId = "BEglQSgt4cUWcj6SKRdu5QkOXTsePmMcusG5EAoyjyOYKlVRjIF1iCNnMOTfpzCiunHRrMui8TIwQPXdkQ8Yxuk",
+            clientId = "BAkN91HvqnqgG3TN44RgLIWWLNuxh8vQmuCzpnEzK7aOAobVu3RiRWwrE6rJkw8mkYmVJ4rWzbll91Sg-NSCHqU",
             redirectUrl = new System.Uri("torusapp://com.torus.Web3AuthUnity/auth"),
             network = Web3Auth.Network.CYAN,
         });
