@@ -69,21 +69,23 @@ public class MintNft : MonoBehaviour
 
         mintItemFunction = contract.GetFunction("mintItem");
         getTokensOfOwnerFunction = contract.GetFunction("getTokensOfOwner");
+        mintNft();
     }
 
 
 
     public async void mintNft()
     {
-        string tokenUri = "https://bafkreigjdlompxctswi2gxcsb6eyutj7xint3wpqvtnyvv7f3ya7avj3hi.ipfs.nftstorage.link/";
+        string tokenUri = "https://bafkreic7fnpdadt5vqrdk6hvcqxymlcvwhyvkg5d767w6tknqe75j6c6xi.ipfs.nftstorage.link/";
 
         try
         {
             Debug.Log("Minting NFT...");
-            var transactionReceipt = await mintItemFunction.SendTransactionAndWaitForReceiptAsync(account.Address, new HexBigInteger(300000), new HexBigInteger(0), null, tokenUri);
+            var transactionReceipt = await mintItemFunction.SendTransactionAndWaitForReceiptAsync(account.Address, new HexBigInteger(3000000), new HexBigInteger(0), null, tokenUri);
             string transactionHash = transactionReceipt.TransactionHash;
             Debug.Log("Transaction Hash: " + transactionHash);
             Debug.Log("Transaction complete!");
+            GetTokensOfOwner();
         }
         catch (Exception ex)
         {
